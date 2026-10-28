@@ -39,26 +39,27 @@
       outline-offset: 3px;
     }
 
-    /* Header: name left, navigation right */
+    /* Header: title left, contact below */
     .site-header {
       position: sticky;
       top: 0;
       z-index: 10;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: flex-start;
-      gap: 24px;
+      gap: 6px;
       padding: 18px 24px;
       background: var(--bg);
     }
 
-    .site-header .name { font-weight: 700; }
+    .site-header .name {
+      font-weight: 700;
+      font-size: 1rem;
+    }
 
-    .site-header nav {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 4px;
+    .site-header .contact {
+      display: inline-block;
+      font-size: 0.95rem;
     }
 
     /* Project index */
@@ -144,11 +145,8 @@
 <body>
 
   <header class="site-header">
-    <a class="name" href="#">TV</a>
-    <nav aria-label="Primary">
-      <a href="https://open.spotify.com/album/0cj8K8q6KmJFgghMbNCyHc" target="_blank" rel="noopener noreferrer">Spotify</a>
-      <a href="mailto:tumrigar@gmail.com">Contact</a>
-    </nav>
+    <a class="name" href="#">Torin Umrigar</a>
+    <a class="contact" href="mailto:tumrigar@gmail.com">Contact</a>
   </header>
 
   <main>
